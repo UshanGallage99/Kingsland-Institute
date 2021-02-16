@@ -1,0 +1,37 @@
+drop database Kingsland;
+
+create database Kingsland;
+
+use Kingsland;
+
+create table Student(
+	 ID varchar(10),
+	 Student_Name varchar(100) not null,
+	 Address varchar(45) not null,
+	 Contact varchar(45) not null,
+	 dob DATE not null,
+	 Gender varchar(45) not null,
+	 constraint primary key(ID),
+	 constraint name_address unique(Student_Name,Address)
+	 );
+
+create table Course(
+	 code varchar(20),
+	 coures_Name varchar(45) not null,
+	 coures_Type varchar(45) not null,
+	 duration varchar(20) not null,
+	 constraint primary key(Code)
+	 );
+	
+create table Registraion(
+	 regNo int(10),
+	 regDate varchar(45) not null,
+	 regFee DOUBLE(10,2) not null,
+	 Student_ID varchar(10),
+	 Course_Code varchar(20),
+	 constraint primary key(regNo),
+	 constraint foreign key(Student_ID) references Student(ID) on delete cascade on update cascade,
+	 constraint foreign key(Course_Code) references Course(Code) on delete cascade on update cascade
+	 );
+
+ 

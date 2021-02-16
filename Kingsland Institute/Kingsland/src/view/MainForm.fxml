@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="377.0" prefWidth="698.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainFormController">
+   <children>
+      <Label alignment="CENTER" layoutX="-2.0" layoutY="-1.0" prefHeight="45.0" prefWidth="698.0" text="Kingsland Institute">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="31.0" layoutY="106.0" onMouseClicked="#openStudentForm" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asserts/student-male.png" />
+         </image></ImageView>
+      <ImageView fitHeight="134.0" fitWidth="130.0" layoutX="271.0" layoutY="116.0" onMouseClicked="#openCourseForm" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asserts/books-emoji.png" />
+         </image></ImageView>
+      <ImageView fitHeight="116.0" fitWidth="130.0" layoutX="520.0" layoutY="123.0" onMouseClicked="#openRegistrstionForm" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asserts/renew-subscription.png" />
+         </image></ImageView>
+      <Label alignment="CENTER" layoutX="65.0" layoutY="246.0" prefHeight="28.0" prefWidth="85.0" text="Student">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="284.0" layoutY="245.0" prefHeight="28.0" prefWidth="116.0" text="Course">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="516.0" layoutY="245.0" prefHeight="28.0" prefWidth="116.0" text="Registration">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnClose" layoutX="555.0" layoutY="311.0" onAction="#btnCloseOnAction" text="Close" />
+   </children>
+</AnchorPane>
